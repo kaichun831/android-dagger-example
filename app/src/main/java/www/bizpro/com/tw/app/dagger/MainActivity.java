@@ -6,18 +6,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Qualifier;
 
 import www.bizpro.com.tw.app.dagger.components.DaggerHoneyLemonadeComponent;
 import www.bizpro.com.tw.app.dagger.models.HoneyLemonade;
+import www.bizpro.com.tw.app.dagger.scope.LemonFlavor;
+import www.bizpro.com.tw.app.dagger.scope.LymeFlavor;
 
 
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    @Named("LemonFlavor")
+//    @Named("LemonFlavor")
+    @LemonFlavor
     HoneyLemonade honeyLemonade1;
     @Inject
-    @Named("LymeFlavor")
+//    @Named("LymeFlavor")
+    @LymeFlavor
     HoneyLemonade honeyLemonade2;
 
     @Override

@@ -10,18 +10,22 @@ import www.bizpro.com.tw.app.dagger.models.Lemon;
 import www.bizpro.com.tw.app.dagger.models.Lyme;
 import www.bizpro.com.tw.app.dagger.models.Water;
 import www.bizpro.com.tw.app.dagger.scope.ActivityScope;
+import www.bizpro.com.tw.app.dagger.scope.LemonFlavor;
+import www.bizpro.com.tw.app.dagger.scope.LymeFlavor;
 
 @Module
 public class HoneyLemonadeModule {
 
     @Provides
-    @Named("LemonFlavor")
+    //@Named("LemonFlavor")
+    @LemonFlavor
     HoneyLemonade provideHoneyLemonade(Honey honey, Lemon lemon) {
         return new HoneyLemonade(honey, lemon);
     }
 
     @Provides
-    @Named("LymeFlavor")
+    //@Named("LymeFlavor")
+    @LymeFlavor
     HoneyLemonade provideHoneyLyme(Honey honey, Lyme lyme) {
         return new HoneyLemonade(honey, lyme);
     }
